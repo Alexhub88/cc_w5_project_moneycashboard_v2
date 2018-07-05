@@ -29,14 +29,15 @@ You must be able to create new Transactions ( which should include a merchant na
 
 ## To Run the Application:
 
-* The easiest and most convenient way to run this application is to type the link to the Heroku app into your browser:
-* 'http://moneycashboard-version2.herokuapp.com/'. This takes the user directly to the app's home page, which contains
-* instructions on how to use the application. This is the recommended way to access the application.
+The easiest and most convenient way to run this application is to type the link to the Heroku app into your browser:
+ 
+* 'http://moneycashboard-version2.herokuapp.com/'. 
 
-* Alternatively, a user may clone the repository to a local network folder using the 'git clone' command: 
+This takes the user directly to the app's home page, which contains instructions on how to use the application. This is the recommended way to access the application.
+
+Alternatively, a user may clone the repository to a local network folder using the 'git clone' command: 
 * git clone git@github.com:Alexhub88/cc_wk5_project_moneycashboard_v2.git
 * Enter the folder 
 * Enter: 'ruby app.rb' and press enter
 * Open Google Chrome and go to `http://localhost:4567/`, then press enter
-* This will take the user to the Home page of the website, which then shows the user the options for finding the total 
-* spending, and the breakdowns by Tagtype and Merchant.
+* This will take the user to the Home page of the website, which then shows the user the options for finding the total spending, and the breakdowns by Tagtype and Merchant.
