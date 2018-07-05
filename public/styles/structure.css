@@ -1,0 +1,126 @@
+body {
+  background-size: 100%;
+  background-repeat: no-repeat;
+  color: yellow;
+  font-family: 'Georgia', serif;
+  background-color: darkblue;
+  padding: 0px;
+  margin: 0px;
+}
+
+body.entry-screen {
+  background: url("/images/coins.jpg");
+}
+
+#entry-screen-title {
+  font-family: 'Times New Roman';
+}
+
+#entry-screen-div {
+  font-family: 'Georgia', serif;
+  background-color: #00BFFF;
+  padding: 5px 5px;
+  border: 3px solid green;
+  margin: 0px;
+  text-align: left;
+  color: darkgreen;
+}
+
+h1 {
+  color: yellow;
+  font-family: 'Times New Roman', cursive;
+  margin: 0px;
+  padding: 0px;
+  font-size: 1.8em;
+  margin-bottom: 20px;
+}
+
+h2 {
+  color: white;
+  font-family: 'Georgia', cursive;
+  margin: 0px;
+  padding: 0px;
+}
+
+a, a:link, a:visited {
+  color: yellow;
+  text-decoration: none;
+}
+
+a:hover, a:active, a:focus {
+  color: #c6e2ff;
+}
+
+nav {
+  padding: 0px;
+  margin: 0px;
+  padding-right: 25px;
+}
+
+nav ul li {
+  margin-bottom: 15px;
+  text-transform: uppercase;
+}
+
+ul {
+  padding: 0px;
+  margin: 0px;
+  list-style-type: none;
+}
+
+main {
+  padding: 25px;
+}
+
+.trans-table {
+  background-color: black;
+  border: 5px solid white;
+  padding: 10px;
+}
+
+.trans-table td {
+  text-align: left;
+  padding-left: 20px;
+  padding-bottom: 10px;
+}
+
+.trans-table th {
+  text-align: left;
+  padding-left: 20px;
+  padding-top: 10px;
+}
+
+img.warning-img {
+    width: 50px;
+    height: 50px;
+}
+
+img.pound-img {
+    width: 100px;
+    height: 100px;
+}
+
+td {
+    border: 1px solid;
+   }
+
+.flex {
+  display: flex;
+}
+
+.flex--row {
+  flex-direction: row;
+}
+
+#content {
+  border-left: 1px solid darkred;
+  padding-left: 25px;
+}
+
+#content a {
+  color: yellow;
+}
+
+nav ul li a {
+  color: yellow;
+}

@@ -1,0 +1,40 @@
+<h1>Total Transaction Value: £<%=@display_total%></h1>
+<br>
+<a href="/transactions/new">New Transaction</a>
+<br>
+<br>
+<a href="/transactions/breakdown">Show Breakdown by Tag Type</a>
+<br>
+<br>
+<a href="/transactions/annual">Show Breakdown by Year and Month of Purchase</a>
+<br>
+<br>
+<br>
+<h2>Transaction List</h2>
+<br>
+<table class="trans-table">
+  <tr>
+    <th>Merchant</th>
+    <th>Value (£)</th>
+    <th>Tag Type</th>
+    <th>Date</th>
+    <th>Show</th>
+    <th>Delete</th>
+  </tr>
+
+  <% @transactions.each do |transaction| %>
+  <%merchant = Merchant.find(transaction.merchant_id)%>
+  <%tagtype = TagType.find(transaction.tagtype_id)%>
+  <tr>
+    <td><a><%= merchant.name %></a></td>
+    <td><%= transaction.value %></td>
+    <td><%= tagtype.type %></td>
+    <td><%= transaction.date %></td>
+    <td><form method = "get" action = "/transactions/<%=transaction.id%>">
+    <input type = "submit" value = "Show Transaction"/></form></td>
+    <td><form method = "post" action = "/transactions/<%=transaction.id%>/delete">
+    <input type = "submit" value = "Delete Transaction"/></form></td>
+  </tr>
+  <% end %>
+</table>
+<br>

@@ -1,0 +1,22 @@
+<h1>Total Transaction Value: £<%= @display_total %></h1>
+<br>
+<h2>Total Spending by Year and Month</h2>
+<br>
+<table class = "trans-table">
+  <tr>
+    <th>Year</th>
+    <th>Month</th>
+    <th>Value (£)</th>
+  </tr>
+  <% for total in @annual_totals %>
+    <% monthly_totals_array = total["monthly_totals"] %>
+     <% for i in 0..11 %>
+  <tr>
+    <td><a><%=total["year"]%></a></td>
+    <td><a><%=Date::MONTHNAMES[i+1]%></a></td>
+    <td><a><%= monthly_totals_array[i] %></a></td>
+  </tr>
+    <% end %>
+  <% end %>
+</table>
+<br>

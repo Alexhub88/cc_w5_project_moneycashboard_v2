@@ -1,0 +1,8 @@
+<form method="post" action = "/tagtypes/<%= @tagtype.id%>">
+
+  <label for ="tagtype-type">Enter Updated Tag Type:  </label>
+  <input id="tagtype-type" type = "text" name = "type" value="<%= @tagtype.type %>">
+
+  <input type="submit" value="Update Tag Type"/>
+
+</form>

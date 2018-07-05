@@ -1,0 +1,19 @@
+<h1>Total Transaction Value: £<%=@display_total%></h1>
+<br>
+<br>
+<h2>Total Transaction Value by Tag Type:</h2>
+<br>
+<br>
+<table class = "trans-table">
+  <tr>
+    <th>Tag Type</th>
+    <th>Value (£)</th>
+    </tr>
+    <% @total_values_by_tag_array.each do |hash| %>
+    <tr>
+      <td><a><%= hash["tag_type"] %></a></td>
+      <td><a><%= hash["total"] %></a></td>
+    </tr>
+  <% end %>
+<table>
+<br>

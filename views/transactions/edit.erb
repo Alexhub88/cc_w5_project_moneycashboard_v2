@@ -1,0 +1,33 @@
+<form method="post" action = "/transactions/<%= @transaction.id%>">
+
+  <label for="merchant">Edit Merchant:</label>
+  <select name="merchant_id" id="merchant" selected="<%= @transaction.merchant_id  %>">
+    <% @merchants.each do |merchant| %>
+      <% if merchant.id == @transaction.merchant_id %>
+        <option value=<%= merchant.id %> selected><%= merchant.name.capitalize %></option>
+      <% else %>
+        <option value=<%= merchant.id %>><%= merchant.name.capitalize %></option>
+      <% end %>
+    <% end %>
+  </select>
+
+  <label for="transaction-value">Edit Value (£):  </label><br><br>
+  <input id="transaction-value" type="number" name="value" value = "<%= @transaction.value%>"/><br><br>
+
+  <label for="tagtype">Edit Tag Type:</label>
+  <select name="tagtype_id" id="tagtype" selected="<%= @transaction.tagtype_id  %>">
+    <% @tagtypes.each do |tagtype| %>
+      <% if tagtype.id == @transaction.tagtype_id %>
+        <option value=<%= tagtype.id %> selected><%= tagtype.type.capitalize %></option>
+      <% else %>
+        <option value=<%= tagtype.id %>><%= tagtype.type.capitalize %></option>
+      <% end %>
+    <% end %>
+  </select>
+
+  <label for="transaction-date">Edit Date:  </label><br><br>
+  <input id="transaction-date" type="date" name="date" value = "<%= @transaction.date%>"/><br><br><br>
+
+    <input type="submit" value="Update Order"/>
+
+</form>

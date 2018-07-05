@@ -1,0 +1,8 @@
+
+<p>Transaction ID: <%= @transaction.id %></p>
+<p>Merchant: <%= @merchant.name %></p>
+<p>Value: £<%= @transaction.value %></p>
+<p>Tag Type: <%= @tagtype.type %></p>
+<p>Date: <%= @transaction.date %></p>
+<br>
+<p><a href="/transactions/<%= @transaction.id %>/edit">Edit Order</a></p>
